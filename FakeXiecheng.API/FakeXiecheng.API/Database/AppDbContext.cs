@@ -27,18 +27,18 @@ namespace FakeXiecheng.API.Database
             //modelBuilder.Entity<TouristRoute>().HasData(new TouristRoute()
             //{
             //    Id = Guid.NewGuid(),
-            //    Title="ceshititle",
-            //    Description="shuoming",
-            //    OriginalPrice=0,
-            //    CreteTime=DateTime.UtcNow
-            //}); 
-            var touristRouteJsonData = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)+@"/Database/touristRoutesMockData.json");
+            //    Title = "ceshititle",
+            //    Description = "shuoming",
+            //    OriginalPrice = 0,
+            //    CreteTime = DateTime.UtcNow
+            //});
+            var touristRouteJsonData = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)+ @"/Database/touristRoutesMockData.json");
             IList<TouristRoute> touristRoutes = JsonConvert.DeserializeObject<IList<TouristRoute>>(touristRouteJsonData);
             modelBuilder.Entity<TouristRoute>().HasData(touristRoutes);
 
             var touristRoutePictureJsonData = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"/Database/touristRoutePicturesMockData.json");
             IList<TouristRoutePicture> touristRoutePictures = JsonConvert.DeserializeObject<IList<TouristRoutePicture>>(touristRoutePictureJsonData);
-            modelBuilder.Entity<TouristRoute>().HasData(touristRoutePictures);
+            modelBuilder.Entity<TouristRoutePicture>().HasData(touristRoutePictures);
 
             base.OnModelCreating(modelBuilder);
         }

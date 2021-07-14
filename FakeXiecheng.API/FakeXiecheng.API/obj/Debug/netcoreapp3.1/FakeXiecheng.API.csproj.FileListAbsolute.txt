@@ -52,8 +52,6 @@ F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\Newtonsoft.J
 F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
 F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
 F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\obj\Debug\netcoreapp3.1\FakeXiecheng.API.csproj.CoreCompileInputs.cache
-F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\obj\Debug\netcoreapp3.1\FakeXiecheng.API.MvcApplicationPartsAssemblyInfo.cache
 F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\Database\touristRoutePicturesMockData.json
 F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\Database\touristRoutesMockData.json
 D:\FakeXiecheng\Czar.Cms\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -114,3 +112,10 @@ D:\FakeXiecheng\Czar.Cms\FakeXiecheng.API\FakeXiecheng.API\obj\Debug\netcoreapp3
 D:\FakeXiecheng\Czar.Cms\FakeXiecheng.API\FakeXiecheng.API\obj\Debug\netcoreapp3.1\FakeXiecheng.API.dll
 D:\FakeXiecheng\Czar.Cms\FakeXiecheng.API\FakeXiecheng.API\obj\Debug\netcoreapp3.1\FakeXiecheng.API.pdb
 D:\FakeXiecheng\Czar.Cms\FakeXiecheng.API\FakeXiecheng.API\obj\Debug\netcoreapp3.1\FakeXiecheng.API.genruntimeconfig.cache
+F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\obj\Debug\netcoreapp3.1\FakeXiecheng.API.csproj.CoreCompileInputs.cache
+F:\MyCode\FakeXiecheng.API\FakeXiecheng.API\obj\Debug\netcoreapp3.1\FakeXiecheng.API.MvcApplicationPartsAssemblyInfo.cache

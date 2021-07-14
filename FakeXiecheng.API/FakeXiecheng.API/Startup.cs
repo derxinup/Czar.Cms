@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Serialization;
 
 namespace FakeXiecheng.API
 {
@@ -27,11 +29,40 @@ namespace FakeXiecheng.API
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(setupAction =>
+            {
+                setupAction.ReturnHttpNotAcceptable = true;
+            })
+            .AddNewtonsoftJson(setupAction=> {
+                setupAction.SerializerSettings.ContractResolver =
+                 new CamelCasePropertyNamesContractResolver();
+            })
+            .AddXmlDataContractSerializerFormatters()
+            .ConfigureApiBehaviorOptions(setupAction=>
+            {
+                setupAction.InvalidModelStateResponseFactory = context =>
+                {
+                     var problemDetail = new ValidationProblemDetails(context.ModelState)
+                     {
+                         Type = "",
+                         Title = "数据验证失败",
+                         Status = StatusCodes.Status422UnprocessableEntity,
+                         Detail = "请看详细说明",
+                         Instance = context.HttpContext.Request.Path
+                     };
+                     problemDetail.Extensions.Add("traceId", context.HttpContext.TraceIdentifier);
+                     return new UnprocessableEntityObjectResult(problemDetail)
+                     {
+                         ContentTypes = { "application/problem+json" }
+                     };
+                };
+            });
             services.AddTransient<ITouristRouteRepository, TouristRouteRepository>();
             services.AddDbContext<AppDbContext>(option=> {
-                option.UseSqlServer(Configuration["DbContext:ConnectionString"]);
+                //option.UseSqlServer(Configuration["DbContext:ConnectionString"]);
+                option.UseMySql(Configuration["DbContext:MySQLConnectionString"]);
             });
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

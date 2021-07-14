@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FakeXiecheng\\Czar.Cms\\FakeXiecheng.API\\FakeXiecheng.API\\FakeXiecheng.API.csproj": {}
+    "F:\\MyCode\\FakeXiecheng.API\\FakeXiecheng.API\\FakeXiecheng.API.csproj": {}
   },
   "projects": {
-    "D:\\FakeXiecheng\\Czar.Cms\\FakeXiecheng.API\\FakeXiecheng.API\\FakeXiecheng.API.csproj": {
+    "F:\\MyCode\\FakeXiecheng.API\\FakeXiecheng.API\\FakeXiecheng.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FakeXiecheng\\Czar.Cms\\FakeXiecheng.API\\FakeXiecheng.API\\FakeXiecheng.API.csproj",
+        "projectUniqueName": "F:\\MyCode\\FakeXiecheng.API\\FakeXiecheng.API\\FakeXiecheng.API.csproj",
         "projectName": "FakeXiecheng.API",
-        "projectPath": "D:\\FakeXiecheng\\Czar.Cms\\FakeXiecheng.API\\FakeXiecheng.API\\FakeXiecheng.API.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\FakeXiecheng\\Czar.Cms\\FakeXiecheng.API\\FakeXiecheng.API\\obj\\",
+        "projectPath": "F:\\MyCode\\FakeXiecheng.API\\FakeXiecheng.API\\FakeXiecheng.API.csproj",
+        "packagesPath": "C:\\Users\\Derxin\\.nuget\\packages\\",
+        "outputPath": "F:\\MyCode\\FakeXiecheng.API\\FakeXiecheng.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Derxin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -29,7 +30,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,8 +41,23 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[3.1.17, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.17, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.3, )"
@@ -80,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
